@@ -10,8 +10,8 @@ nav{
 }
 
 .navbar{
-display: flex;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .navbar li{
@@ -103,26 +103,29 @@ img{
 }
 
 .Footer{
-    background-color: black;
+    background-color: #E6E6E6;
     width: 100%;
-    height: 25vh;
+    height: 40vh;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
 }
 
 
-.infoPessoal{
+/* .infoPessoal{
    margin-top: -20px;
-}
+} */
+
 
 .infoPessoal h1{
     color: #C90003;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 .infoPessoal h2{
-    color: aliceblue;
+    color: black;
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -134,16 +137,17 @@ img{
 .infoPessoal a{
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
 }
 
 .Pagamento h1{
     color: #C90003;
     font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
 }
 .Pagamento h2{
-    color: aliceblue;
+    color: black;
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -152,12 +156,53 @@ img{
     margin-bottom: 1rem;
 }
 
+.tituloEndereco{
+    margin-bottom: 1rem;
+}
+
+.endereco{
+    margin-top: -20px;
+}
+
+.endereco h1{
+    color: #C90003;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.endereco h2{
+    color: black;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 
-.Midia img{
-    width: 20px;
-    height: 20px;
-    margin-left: 0.5rem;
+.Midia{
+    background-color: #C90003;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+
+.Midia .Insta{
+    width: 40px;
+    height: 30px;
+    margin-right: 0.5rem;
+}
+
+.Midia .Whats{
+    width: 35px;
+    height: 35px;
+    margin-right: 0.5rem;
+}
+
+.Midia .Face{
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
 }
 
 .acessoWhatsapp img{
