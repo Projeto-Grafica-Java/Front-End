@@ -3,9 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/orcamento.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <form class="formulario" method="post" action="http://localhost:8080/api/orcamentos">
+        
+        <h2 class="titulo">Orçamento</h2>
+
+        <label class="label">
+            <input type="text" class="input-bordas" placeholder="Assunto" required="">
+            <span class="focus-border"> <i></i> </span>
+        </label>
+
+        <label class="label">
+            <input type="text" name="clientName" class="input-bordas" placeholder="Nome" required="">
+            <span class="focus-border"> <i></i> </span>
+        </label>
+
+        <label class="label">
+            <input type="text" name="phone" class="input-bordas" placeholder="Telefone" required="">
+            <span class="focus-border"> <i></i> </span>
+        </label>
+
+        <label class="label">
+            <input type="text" name="email" class="input-bordas" placeholder="E-mail" required="">
+            <span class="focus-border"> <i></i> </span>
+        </label>
+
+        <label class="label">
+            <select class="input-bordas" name="material" required="">
+                <option value="" disabled selected>Selecione o material</option>
+                <option value="vinil-adesivo">Vinil Adesivo</option>
+                <option value="pvc">PVC</option>
+                <option value="lonas">Lonas</option>
+                <option value="policarbonato">Policarbonato</option>
+                <option value="acrilico">Acrílico</option>
+            </select>
+            <span class="focus-border"> <i></i> </span>
+        </label>
+
+        <label class="label">
+            <select class="input-bordas" name="paperType" required="">
+                <option value="" disabled selected>Selecione o tipo de papel</option>
+                <option value="papel-couche">Papel Couchê</option>
+                <option value="papel-offset">Papel Offset</option>
+                <option value="papel-cartao">Papel Cartão</option>
+                <option value="papel-reciclado">Papel Reciclado</option>
+                <option value="papel-kraft">Papel Kraft</option>
+                <option value="papel-vegetal">Papel Vegetal</option>
+                <option value="papel-fotografico">Papel Fotográfico</option>
+                <option value="papelao-ondulado">Papelão Ondulado</option>
+            </select>
+            <span class="focus-border"> <i></i> </span>
+        </label>
+
+        <label class="label">
+            <select class="input-bordas" name="dimension" required="">
+                <option value="" disabled selected>Selecione o formato do material</option>
+                <option value="a3">29.7 x 42 cm (A3)</option>
+                <option value="a4">21 x 29.7 cm (A4)</option>
+                <option value="a5">14.8 x 21 cm (A5)</option>
+                <option value="a6">10.5 x 14.8 cm (A6)</option>
+                <option value="a7">7.4 x 10.5 cm (A7)</option>
+                <option value="banner-pequeno">60 x 90 cm (Banner Pequeno)</option>
+                <option value="banner-medio">90 x 120 cm (Banner Médio)</option>
+                <option value="banner-grande">120 x 180 cm (Banner Grande)</option>
+                <option value="personalizado">Personalizado</option>
+            </select>
+            <span class="focus-border"> <i></i> </span>
+        </label>
+
+        <label class="label">
+            <select class="input-bordas" name="finishing" required="">
+                <option value="" disabled selected>Selecione o acabamento</option>
+                <option value="laminacao-fosca">Laminação Fosca</option>
+                <option value="laminacao-brilho">Laminação Brilho</option>
+                <option value="verniz-total">Verniz Total</option>
+                <option value="relevo-seco">Relevo Seco</option>
+                <option value="corte-especial">Corte Especial</option>
+                <option value="dobra">Dobra</option>
+                <option value="furo">Furo</option>
+                <option value="espiral">Encadernação com Espiral</option>
+            </select>
+            <span class="focus-border"> <i></i> </span>
+        </label>
+
+        <label class="label">
+            <input type="number" name="quantity" class="input-bordas" placeholder="Quantidade" required="">
+            <span class="focus-border"> <i></i> </span>
+        </label>
+
+        <label class="label">
+            <input type="text" name="artwork" placeholder="URL da arte" class="input-bordas" required="">
+            <span class="focus-border"> <i></i> </span>
+        </label>
+
+        <label class="label">
+            <textarea type="text" name="notes" class="input-bordas textarea" rows="4" placeholder="Descrição" required=""></textarea>
+            <span class="focus-border"> <i></i> </span>
+        </label>
+
+        <div class="button-container">
+            <button type="submit" class="button-form borda-inversa">Enviar</button>
+        </div>
+
+    </form>  
+    <div class="imagem-lateral">
+        <img src="../imagens/background-card.png" alt="Imagem ilustrativa">
+    </div>
+
+    <script src="../scripts/orcamento.js"></script>
 </body>
 </html>

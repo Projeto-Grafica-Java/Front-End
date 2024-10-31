@@ -1,0 +1,126 @@
+.formulario  .titulo { 
+    color: #ffffff;
+    font-size: 1.5em;
+    padding-bottom: 7px;
+    font-family: 'Arial', sans-serif;
+    text-align: center; 
+  }
+  
+  .formulario {
+    max-width: 50%;
+    margin: auto;
+    background: #C90003;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  :focus{outline: none;}
+  
+  .label { 
+  
+    float: left; 
+    width: 100%; 
+    margin-bottom: 25px; 
+    position: relative;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+  
+  }
+  
+  .input-bordas{
+    
+    font: 15px/24px "Lato", Arial, sans-serif; 
+    color: #333; 
+    width: 80%; 
+    max-width: 350px;
+    box-sizing: border-box; 
+    letter-spacing: 1px;
+    border: 1px solid #ccc; 
+    padding: 7px 14px 9px; 
+    border-radius: 5px;
+    transition: 0.4s;
+    margin: 0 auto;
+
+  
+  }
+  
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+}
+
+.button-form { 
+    background-color: #C90003;
+    padding: 0.5em 1.3em;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    display: block; 
+}
+  .borda-inversa {
+  
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: background;
+    transition-property: background;
+    box-shadow: inset 0 0 0 2px, 0 0 1px rgba(0, 0, 0, 0);
+  
+  }
+  
+  .borda-inversa:hover, .borda-inversa:focus, .borda-inversa:active {
+    
+    background: white;
+    color: #C90003; 
+  
+  }
+  
+body {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh; 
+    margin: 0;
+    background-color: #E6E6E6;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.formulario {
+    max-width: 50%;
+    margin: 0;
+}
+
+.imagem-lateral {
+    max-width: 100%; 
+    height: auto;
+}
+
+.imagem-lateral img {
+    width: 120%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.img-logo {
+    width: 20%;
+}
