@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Ordens de Serviço</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #c00;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .filter-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .filter-bar a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .order-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-tag {
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: white;
+            display: inline-block;
+        }
+
+        .status-pending {
+            background-color: orange;
+        }
+
+        .status-awaiting {
+            background-color: red;
+        }
+
+        .status-not-started {
+            background-color: rgb(0, 3, 158);
+        }
+
+        .status-finished {
+            background-color: green;
+        }
+
+        /* Estilos do Modal */
+        .modal {
+            display: none;
+            /* Escondido por padrão */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Fundo semi-transparente */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Conteúdo da modal */
+        .modal-content {
+            background-color: #fff;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            padding: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Cabeçalho da modal */
+        .modal-header {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Corpo da modal */
+        .modal-body label {
+            display: block;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .modal-body input,
+        .modal-body select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        /* Rodapé da modal */
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        /* Botão de cancelar */
+        .cancel-button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cancel-button:hover {
+            background-color: #d32f2f;
+        }
+
+        /* Botão de salvar */
+        .save-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .save-button:hover {
+            background-color: #388E3C;
+        }
+
+        /* Animação de entrada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Gráfica Digital</h1>
+    </div>
+
+    <div class="container">
+        <h2>Controle de Ordens de Serviço</h2>
+        <div class="filter-bar">
+            <a onclick="filterOrders('Todas')">Todas as OS</a>
+            <a onclick="filterOrders('Não Iniciada')">Não Iniciada</a>
+            <a onclick="filterOrders('Em Progresso')">Em Progresso</a>
+            <a onclick="filterOrders('Aguardando Entrega')">Aguardando Entrega</a>
+            <a onclick="filterOrders('Concluido')">Concluído</a>
+            <button onclick="openModal()">Nova Ordem de Serviço</button>
+        </div>
+
+        <div id="ordersContainer">
+            <!-- Ordens de Serviço Existentes -->
+            <div class="order-card" data-status="Não Iniciada">
+                <div>
+                    <strong>OS ID 2832839</strong><br>
+                    <strong>BANNER</strong><br>
+                    Colorido<br>
+                    1 Unidade<br>
+                    Tamanho: 60x40
+                </div>
+                <div>
+                    <span class="status-tag status-not-started">Não Iniciada</span><br>
+                    <select onchange="updateStatus(this)">
+                        <option value="Não Iniciada" selected>Não Iniciada</option>
+                        <option value="Em Progresso">Em Progresso</option>
+                        <option value="Aguardando Entrega">Aguardando Entrega</option>
+                        <option value="Concluido">Concluído</option>
+                    </select>
+                </div>
+            </div>
+            <div class="order-card" data-status="Não Iniciada">
+                <div>
+                    <strong>OS ID 2832839</strong><br>
+                    <strong>BANNER</strong><br>
+                    Colorido<br>
+                    1 Unidade<br>
+                    Tamanho: 60x40
+                </div>
+                <div>
+                    <span class="status-tag status-not-started">Não Iniciada</span><br>
+                    <select onchange="updateStatus(this)">
+                        <option value="Não Iniciada" selected>Não Iniciada</option>
+                        <option value="Em Progresso">Em Progresso</option>
+                        <option value="Aguardando Entrega">Aguardando Entrega</option>
+                        <option value="Concluido">Concluído</option>
+                    </select>
+                </div>
+            </div>
+            <div class="order-card" data-status="Não Iniciada">
+                <div>
+                    <strong>OS ID 2832839</strong><br>
+                    <strong>BANNER</strong><br>
+                    Colorido<br>
+                    1 Unidade<br>
+                    Tamanho: 60x40
+                </div>
+                <div>
+                    <span class="status-tag status-not-started">Não Iniciada</span><br>
+                    <select onchange="updateStatus(this)">
+                        <option value="Não Iniciada" selected>Não Iniciada</option>
+                        <option value="Em Progresso">Em Progresso</option>
+                        <option value="Aguardando Entrega">Aguardando Entrega</option>
+                        <option value="Concluido">Concluído</option>
+                    </select>
+                </div>
+            </div>
+            <div class="order-card" data-status="Não Iniciada">
+                <div>
+                    <strong>OS ID 2832839</strong><br>
+                    <strong>BANNER</strong><br>
+                    Colorido<br>
+                    1 Unidade<br>
+                    Tamanho: 60x40
+                </div>
+                <div>
+                    <span class="status-tag status-not-started">Não Iniciada</span><br>
+                    <select onchange="updateStatus(this)">
+                        <option value="Não Iniciada" selected>Não Iniciada</option>
+                        <option value="Em Progresso">Em Progresso</option>
+                        <option value="Aguardando Entrega">Aguardando Entrega</option>
+                        <option value="Concluido">Concluído</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Nova Ordem -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">Nova Ordem de Serviço</div>
+            <div class="modal-body">
+                <label for="orderName">Nome:</label>
+                <input type="text" id="orderName" required><br><br>
+
+                <label for="orderQuantity">Quantidade:</label>
+                <input type="number" id="orderQuantity" required><br><br>
+
+                <label for="orderQuantity">Tamanho</label>
+                <input type="text" id="orderTamanho" ><br><br>
+
+                <label for="orderQuantity">Detalhes</label>
+                <input type="text" id="orderDetalhe" required ><br><br>
+
+                <label for="orderStatus">Status:</label>
+                <select id="orderStatus">
+                    <option value="Não Iniciada">Não Iniciada</option>
+                    <option value="Em Progresso">Em Progresso</option>
+                    <option value="Aguardando Entrega">Aguardando Entrega</option>
+                    <option value="Concluido">Concluído</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-button" onclick="closeModal()">Cancelar</button>
+                <button class="save-button" onclick="addOrder()">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterOrders(status) {
+            const orders = document.querySelectorAll('.order-card');
+            orders.forEach(order => {
+                if (status === 'Todas' || order.dataset.status === status) {
+                    order.style.display = 'flex';
+                } else {
+                    order.style.display = 'none';
+                }
+            });
+        }
+
+        function updateStatus(selectElement) {
+            const orderCard = selectElement.closest('.order-card');
+            const statusTag = orderCard.querySelector('.status-tag');
+
+            const newStatus = selectElement.value;
+            orderCard.dataset.status = newStatus;
+
+            statusTag.textContent = newStatus;
+            statusTag.className = 'status-tag';
+
+            if (newStatus === 'Não Iniciada') {
+                statusTag.classList.add('status-not-started');
+            } else if (newStatus === 'Em Progresso') {
+                statusTag.classList.add('status-pending');
+            } else if (newStatus === 'Aguardando Entrega') {
+                statusTag.classList.add('status-awaiting');
+            } else if (newStatus === 'Concluido') {
+                statusTag.classList.add('status-finished');
+            }
+        }
+
+        function openModal() {
+            document.getElementById('orderModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('orderModal').style.display = 'none';
+        }
+
+        function addOrder() {
+            const orderName = document.getElementById('orderName').value;
+            const orderQuantity = document.getElementById('orderQuantity').value;
+            const orderStatus = document.getElementById('orderStatus').value;
+            const orderTamanho = document.getElementById('orderTamanho').value;
+            const orderDetalhe = document.getElementById('orderDetalhe').value;
+
+            const newOrderCard = document.createElement('div');
+            newOrderCard.className = 'order-card';
+            newOrderCard.dataset.status = orderStatus;
+
+            newOrderCard.innerHTML = `
+            <div>
+                <strong>OS ID:</strong> ${Math.floor(Math.random() * 1000000)}<br>
+                <strong>${orderName}</strong><br>
+                ${orderDetalhe} <br>
+                ${orderQuantity} Unidade(s) <br>
+                ${orderTamanho} <br>
+            </div>
+            <div>
+                <span class="status-tag">${orderStatus}</span><br>
+                <select onchange="updateStatus(this)">
+                    <option value="Não Iniciada" ${orderStatus === 'Não Iniciada' ? 'selected' : ''}>Não Iniciada</option>
+                    <option value="Em Progresso" ${orderStatus === 'Em Progresso' ? 'selected' : ''}>Em Progresso</option>
+                    <option value="Aguardando Entrega" ${orderStatus === 'Aguardando Entrega' ? 'selected' : ''}>Aguardando Entrega</option>
+                    <option value="Concluido" ${orderStatus === 'Concluido' ? 'selected' : ''}>Concluído</option>
+                </select>
+            </div>
+        `;
+
+            const ordersContainer = document.getElementById('ordersContainer');
+            ordersContainer.appendChild(newOrderCard);
+
+            closeModal();
+        }
+    </script>
+
+</body>
+
+</html>
