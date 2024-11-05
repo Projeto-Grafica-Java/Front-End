@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/editOS.css"> 
+    <title>Ordem de Serviço</title>
+</head>
+<body>
+    <img src="./IMG.JPG.jpg" alt="Logotipo" class="logo"> 
+    <div>
+        <h1>Editar Ordem de Serviço</h1>
+    </div>
+    
+    <div class="container">
+        <h2>SEU ID: 11111</h2>
+        <h3>Detalhes do Pedido</h3> 
+        <div class="linha"></div>
+   
+        <form id="ordem-servico">
+            <div class="input-group">
+                <div class="input-container">
+                    <label for="nome">Nome do Cliente*</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="input-container">
+                    <label for="telefone">Telefone*</label>
+                    <input type="text" id="telefone" name="telefone" required>
+                </div>
+                <div class="input-container">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-container">
+                    <label for="tipo-servico">Tipo de Serviço*</label>
+                    <input type="text" id="tipo-servico" name="tipo-servico" required>
+                </div>
+                <div class="input-container">
+                    <label for="impressao">Impressão*</label>
+                    <input type="text" id="impressao" name="impressao" required>
+                </div>
+                <div class="input-container">
+                    <label for="tipo-papel">Tipo de Papel*</label>
+                    <input type="text" id="tipo-papel" name="tipo-papel" required>
+                </div>
+                <div class="input-container">
+                    <label for="acabamento">Acabamento*</label>
+                    <input type="text" id="acabamento" name="acabamento" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="input-container">
+                    <label for="quantidade">Quantidade*</label>
+                    <input type="number" id="quantidade" name="quantidade" required>
+                </div>
+                <div class="input-container">
+                    <label for="tamanho">Tamanho*</label>
+                    <input type="text" id="tamanho" name="tamanho" required>
+                </div>
+                <div class="input-container">
+                    <label for="data-entrega">Data de Entrega*</label>
+                    <input type="date" id="data-entrega" name="data-entrega" required>
+                </div>
+                <div class="input-container">
+                    <label for="valor-total">Valor Total*</label>
+                    <input type="text" id="valor-total" name="valor-total" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="input-container">
+                    <label for="hora-entrega">Hora da Entrega*</label>
+                    <input type="time" id="hora-entrega" name="hora-entrega" required>
+                </div>
+                <div class="input-container">
+                    <label for="data-entrada">Data de Entrada*</label>
+                    <input type="date" id="data-entrada" name="data-entrada" required>
+                </div>
+                <div class="input-container">
+                    <label for="valor-receber">Sinal de*</label>
+                    <input type="text" id="valor-receber" name="valor-receber" required>
+                </div>
+                <div class="input-container">
+                    <label for="valor-receber-final">Valor a Receber*</label>
+                    <input type="text" id="valor-receber-final" name="valor-receber-final" required>
+                </div>
+            </div>
+
+            <label for="descricao">Descrição do Serviço:</label>
+            <textarea id="descricao" name="descricao" rows="4"></textarea>
+
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+</body>
+</html>

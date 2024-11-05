@@ -1,152 +1,196 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gráfica</title>
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    
-    <!-- estilo do carrossel -->
-    <style>
-        html,
-        body {
-          position: relative;
-          height: 100%;
-        }
-    
-        body {
-          background: rgb(0, 0, 0);
-          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-          font-size: 14px;
-          color: #000;
-          margin: 0;
-          padding: 0;
-        }
-    
-        .swiper {
-          width: 100%;
-          height: 400px;
-        }
-    
-        .swiper-slide {
-          text-align: center;
-          font-size: 18px;
-    
-          /* Center slide text vertically */
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          -webkit-justify-content: center;
-          justify-content: center;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          -webkit-align-items: center;
-          align-items: center;
-        }
-    
-        .swiper-slide img {
-          display: block;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-    
-        .swiper {
-          margin-left: auto;
-          margin-right: auto;
-        }
-      </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gráfica</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 400px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="Logo">
-            <img src="../imagens/LogoBrancoVermelho.png" alt="">
-        </div>
-
-        <div class="menu-services">
-          <ul>
-            <li class="dropdown">
-              <a href="">Todos os serviços</a>
+  <nav class="navbar">
+    <div class="Logo">
+      <img src="../imagens/LogoBrancoVermelho.png" alt="">
+    </div>
+  </nav>
   
-              <div class="dropdown-menu">
-                <a href="">Serviço 1</a>
-                <a href="">Serviço 2</a>
-                <a href="">Serviço 3</a>
-                <a href="">Serviço 4</a>
-                <a href="">Serviço 4</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-  
-    </nav>
-    <div class="meio">
-        <div class="container">
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="../imagens/imagemTeste.png" alt="logo">
-                </div>
-                <div class="swiper-slide">
-                  <img src="../imagens/imagemTeste.png" alt="logo1">
-                </div>
-                <div class="swiper-slide">
-                  <img src="../imagens/imagemTeste.png" alt="logo2">
-                </div>
-                <div class="swiper-slide">
-                  <img src="../imagens/imagemTeste.png" alt="logo3">
-                </div>
-                <div class="swiper-slide">
-                  <img src="../imagens/imagemTeste.png" alt="logo4">
-                </div>
-                <div class="swiper-slide">
-                  <img src="../imagens/imagemTeste.png" alt="logo5">
-                </div>
-                <div class="swiper-slide">
-                  <img src="../imagens/imagemTeste.png" alt="logo6">
-                </div>
-                <div class="swiper-slide">
-                  <img src="../imagens/imagemTeste.png" alt="logo7">
-                </div>
-        
-              </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-pagination"></div>
-            </div>
+  <div class="meio">
+    <div class="container">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="../imagens/cartao-img-1.jpg" alt="logo">
+          </div>
+          <div class="swiper-slide">
+            <img src="../imagens/cartao-img-2.jpg" alt="logo1">
+          </div>
+          <div class="swiper-slide">
+            <img src="../imagens/cartao-img-3.jpg" alt="logo2">
+          </div>
+          <div class="swiper-slide">
+            <img src="../imagens/cartao-img-4.jpg" alt="logo3">
+          </div>
+          <div class="swiper-slide">
+            <img src="../imagens/cartao-img-5.jpg" alt="logo4">
+          </div>
+          <div class="swiper-slide">
+            <img src="../imagens/cartao-img-6.jpg" alt="logo5">
+          </div>
+          <div class="swiper-slide">
+            <img src="../imagens/cartao-img-7.jpg" alt="logo6">
+          </div>
+          <div class="swiper-slide">
+            <img src="../imagens/cartao-img-8.jpg" alt="logo7">
+          </div>
+          <div class="swiper-slide">
+            <img src="../imagens/cartao-img-9.jpg" alt="logo7">
+          </div>
+          <div class="swiper-slide">
+            <img src="../imagens/cartao-img-10.png" alt="logo7">
+          </div>
+          <div class="swiper-slide">
+            <img src="../imagens/cartao-img-11.jpg" alt="logo7">
+          </div>
+          <div class="swiper-slide">
+            <img src="../imagens/cartao-img-12.jpg" alt="logo7">
+          </div>
 
-            <div class="Contate">
-                <div class="orcamento">
-                    <!-- <button href="../paginas/orcamento.html">Faça um orçamento</button> -->
-                     <a href="../paginas/orcamento.html">Faça um orçamento</a>
-                </div>
-            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="Contate">
+        <div class="orcamento">
+          <a href="../paginas/orcamento.html">Faça um orçamento</a>
+        </div>
+      </div>
+      <div class="carousel">
+        <div class="carousel-item">
+          <img src="../imagens/circle-img-1.jpg" alt="">
+          <p>Cartões</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../imagens/circle-img-2.jpg" alt="">
+          <p>Display's</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../imagens/circle-img-3.jpg" alt="">
+          <p>Canecas</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../imagens/circle-img-4.jpg" alt="">
+          <p>Adesivos</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../imagens/circle-img-5.jpg" alt="">
+          <p>Cardápios</p>
+        </div>
+        <div class="carousel-item view-all">
+          <span>+</span>
+          <p>Ver Todos</p>
+      </div>
+      </div>
+
+      <div>
+        <div class="info-cards">
+          <div class="info-card">
+              <div class="icon">📷</div>
+              <h3>Tecnologia</h3>
+              <p>Maquinário de ponta para pequenas e médias tiragens.</p>
+          </div>
+          <div class="info-card">
+              <div class="icon">⏱️</div>
+              <h3>Melhores prazos</h3>
+              <p>Evoluímos nossa política e, claro, os nossos valores de frete.</p>
+          </div>
+          <div class="info-card">
+              <div class="icon">📦</div>
+              <h3>Reimpressão grátis</h3>
+              <p>Imprimimos e reenviamos em caso de erro na impressão.</p>
+          </div>
+          <div class="info-card">
+              <div class="icon">💬</div>
+              <h3>Suporte por Whatsapp</h3>
+              <p>Das 08 às 18h, de segunda à sexta-feira por <a href="#">Whatsapp</a>.</p>
+          </div>
+      </div>
+      </div>
     </div>
     <div class="Footer">
       <div class="Pagamento">
-        <h1 class="tituloPay">Formas de pagamento: </h1>
-        <h2>Pix</h2>
-        <h2>Dinheiro</h2>
-        <h2>Débito e Crédito</h2>
+          <h1 class="tituloPay"><i class="fa fa-credit-card"></i> Formas de pagamento</h1>
+          <h2>Pix</h2>
+          <h2>Dinheiro</h2>
+          <h2>Débito e Crédito</h2>
       </div>
-
-    <div class="infoPessoal">
-      <h1 class="tituloDuvidas">Contatos</h1>
-      <h2>Telefone: (19)3305-5499</h2>
-      <h2>Whatsapp: (19)98360-6566</h2>
-      <a href="mailto:contato@mzgraf.com.br?subject=">contato@mzgraf.com.br</a>
-    </div>
-
-    <div class="endereco">
-      <h1 class="tituloEndereco">Onde nos encontrar:</h1>
-      <h2>Av. Suaçuna, 299</h2>
-      <h2>Vila Aeroporto</h2>
-      <h2>Campinas/SP</h2>
-    </div>
+      <div class="infoPessoal">
+          <h1 class="tituloDuvidas"><i class="fa fa-phone"></i> Contatos</h1>
+          <h2>Telefone: (19)3305-5499</h2>
+          <h2>Whatsapp: (19)98360-6566</h2>
+          <a href="mailto:contato@mzgraf.com.br?subject="> contato@mzgraf.com.br</a>
+      </div>
+      <div class="endereco">
+          <h1 class="tituloEndereco"><i class="fa fa-map-marker-alt"></i> Onde nos encontrar</h1>
+          <h2>Av. Suaçuna, 299</h2>
+          <h2>Vila Aeroporto</h2>
+          <h2>Campinas/SP</h2>
+      </div>
   </div>
     <div class="Midia">
       <img src="../imagens/IconFace.png" class="Face" alt="">
@@ -154,57 +198,57 @@
       <img src="../imagens/IconWhats.png" class="Whats" alt="">
     </div>
 
-    <!-- JS do carrossel -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
 
-    var swiper2 = new Swiper(".mySwiper2", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 1500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+      var swiper2 = new Swiper(".mySwiper2", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
 
-    var swiper3 = new Swiper(".mySwiper3", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
+      var swiper3 = new Swiper(".mySwiper3", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Controle de Estoque</title>
+    <link rel="stylesheet" href="../styles/estoque.css">
+    <style>
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbarAdm">
+        <div class="logoAdm">
+            <a href="">
+                <img src="../imagens/LogoBrancoVermelho.png" alt="Logo">
+            </a>
+        </div>
+        <div class="contaAdmin">
+            <div class="logoUser">
+                <img src="../imagens/user.png" alt="">
+            </div>
+            <div class="Admin">
+                <h1>Administrador</h1>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>Manipulação de controle de estoque de produtos</h1>
+
+        <div class="controls">
+            <button id="btnAdicionar">INCLUIR PRODUTO</button>
+            <button id="btnRemoverSelecionado">REMOVER SELECIONADO</button>
+            <!-- <input type="text" placeholder="Digite para pesquisar"> -->
+            <!-- <span>Exibir</span> -->
+            <!-- <select>
+                <option>Ordenar por</option>
+            </select> -->
+            <!-- <button>IMPORTAR SALDO</button> -->
+        </div>
+
+        <!-- Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="selectAll"></th>
+                    <th>Produto</th>
+                    <th>Código</th>
+                    <th>Medidas</th>
+                    <th>Vendas</th>
+                    <th>Quantidade</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody id="productTableBody">
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <button>&lt;</button>
+            <span>1</span>
+            <button>&gt;</button>
+        </div>
+
+        <div class="actions">
+            <button>DESCARTAR ALTERAÇÕES</button>
+            <button>SALVAR ALTERAÇÕES</button>
+        </div>
+    </div>
+
+    <div id="modalProduto" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">Novo Produto</span>
+                <span class="close" onclick="fecharModal()">&times;</span>
+            </div>
+            
+            <label for="productName">Produto</label>
+            <input type="text" id="productName" name="productName">
+            
+            <label for="email">Codigo</label>
+            <input type="number" id="codigo" name="codigo">
+            
+            <label for="medidas">Medidas</label>
+            <input type="tel" id="medidas" name="medidas">
+            
+            <label for="vendas">Vendas</label>
+            <input type="text" id="vendas" name="vendas">
+
+            <label for="quantidade">Quantidade</label>
+            <input type="text" id="quantidade" name="quantidade">
+            
+            <button type="submit" id="submitProductBtn">Cadastrar</button>
+        </div>
+    </div>
+    <script src="../scripts/estoque.js"></script>
+
+</body>
+
+</html>

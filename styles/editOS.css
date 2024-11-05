@@ -1,0 +1,115 @@
+body, html {
+    margin: 0; 
+    padding: 0; 
+    font-family: Arial, sans-serif; 
+    height: 100%; 
+}
+
+.logo {
+    display: block; 
+    width: 100%; 
+    height: auto; 
+}
+
+h1 {
+    line-height: 1.5; 
+    font-size: 20px;
+    text-align: center; 
+    color: #000000; 
+}
+
+.container {
+    width: 90%; 
+    max-width: 80%; 
+    height: auto; 
+    margin: 20px auto; 
+    background: #D9D9D9; 
+    padding: 20px; 
+    border-radius: 20px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    box-sizing: border-box; 
+}
+
+.container h2 {
+    font-size: 30px; 
+    text-align: left; 
+    color: #C90003; 
+}
+
+h3 {
+    font-size: 20px; 
+    text-align: center; 
+    color: #000000; 
+}
+
+.linha {
+    height: 2px; 
+    background-color: #000000; 
+    margin: 10px 0; 
+}
+
+.input-group {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-bottom: 15px; 
+}
+
+
+.input-container {
+    flex: 1; 
+    min-width: 200px; 
+    margin-right: 10px; 
+}
+
+.input-container:last-child {
+    margin-right: 0; 
+}
+
+label {
+    display: block; 
+    margin: 5px 0; 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+textarea {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border: none; 
+    border-radius: 10px; 
+    box-sizing: border-box; 
+}
+
+input[type="time"] 
+{
+    width: 95%; 
+    padding: 7px; 
+    border-radius: 10px;
+    text-align: left;
+    border: none; 
+    font-size: 16px; 
+
+}
+
+button {
+    background-color: #C90003; 
+    color: white; 
+    padding: 10px; 
+    display: block;
+    margin: 20px auto;
+    border: none; 
+    text-align: center;
+    border-radius: 20px; 
+    cursor: pointer; 
+    width: 100px; 
+    max-width: 300px; 
+}
+
+button:hover {
+   text-align: center;
+    background-color: #a60000; 
+}

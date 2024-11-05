@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/orcamento.css">
     <title>Document</title>
 </head>
+
 <body>
+    <nav class="navbar">
+        <div class="Logo">
+            <a href="../paginas/index.html">
+                <img src="../imagens/LogoBrancoVermelho.png" alt="">
+            </a>
+        </div>
+    </nav>
+    
     <form class="formulario" method="post" action="http://localhost:8080/api/orcamentos">
-        
+
         <h2 class="titulo">Orçamento</h2>
 
         <label class="label">
@@ -100,7 +110,8 @@
         </label>
 
         <label class="label">
-            <textarea type="text" name="notes" class="input-bordas textarea" rows="4" placeholder="Descrição" required=""></textarea>
+            <textarea type="text" name="notes" class="input-bordas textarea" rows="4" placeholder="Descrição"
+                required=""></textarea>
             <span class="focus-border"> <i></i> </span>
         </label>
 
@@ -108,11 +119,12 @@
             <button type="submit" class="button-form borda-inversa">Enviar</button>
         </div>
 
-    </form>  
+    </form>
     <div class="imagem-lateral">
         <img src="../imagens/background-card.png" alt="Imagem ilustrativa">
     </div>
 
     <script src="../scripts/orcamento.js"></script>
 </body>
+
 </html>

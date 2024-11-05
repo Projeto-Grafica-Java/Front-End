@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.navbar {
+    background-color: #c00;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 40px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.os-id {
+    display: block;
+    font-size: 1.1em;
+    color: #c00;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.order-details h2 {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.form-grid label {
+    font-size: 0.9em;
+    color: #333;
+    padding: 5px 0;
+    grid-column: span 1;
+}
+
+.form-grid input[type="text"], 
+.form-grid input[type="number"], 
+.form-grid input[type="email"], 
+.form-grid input[type="date"], 
+.form-grid input[type="time"], 
+.form-grid textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    grid-column: span 1;
+}
+
+textarea {
+    resize: none;
+    grid-column: span 4;
+}
+
+input.small {
+    width: 70px;
+}
+
+.btn-concluir {
+    width: 100%;
+    padding: 10px;
+    background-color: #c00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn-concluir:hover {
+    background-color: #a00;
+}

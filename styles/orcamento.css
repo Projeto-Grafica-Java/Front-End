@@ -121,6 +121,14 @@ body {
     border-radius: 8px;
 }
 
-.img-logo {
-    width: 20%;
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+
+.Logo img {
+  max-width: 30%;
+  height: auto;
 }
